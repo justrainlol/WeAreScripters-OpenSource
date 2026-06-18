@@ -146,7 +146,7 @@ jobs:
         run: |
           git config --global user.name "WeAreScripters-DevOps"
           git config --global user.email "devops@wearescripters.com"
-          git add ${{ github.event.inputs.project }}/downloads/*
+          git add -f ${{ github.event.inputs.project }}/downloads/*
           if git diff --staged --quiet; then
             echo "No new changes to commit."
           else
